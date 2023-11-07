@@ -37,7 +37,7 @@ const showWarriors = async() => {
         }
 
         const img = document.createElement("img");
-        img.src = "http://localhost:3000/" + warrior.img;
+        img.src = "https://node-two.onrender.com/" + warrior.img;
         section.append(img);
 
         const hr = document.createElement("hr");
@@ -48,7 +48,7 @@ const showWarriors = async() => {
 
 const getWarriors = async() => {
     try {
-        return (await fetch("http://localhost:3000/api/warriors")).json();
+        return (await fetch("https://node-two.onrender.com/api/warriors")).json();
     } catch (error) {
         console.log("error getting json");
         return "";
